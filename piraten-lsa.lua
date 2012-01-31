@@ -1,8 +1,6 @@
 config.instance_name = "Piratenpartei Sachsen-Anhalt"
 config.instance_prefix = "lsa"
 
-config.absolute_base_url = "http://lqfb.piraten-lsa.de/".. config.instance_prefix .. "/"
-
 config.mitgliedwerden = "http://www.piraten-lsa.de/mitglied-werden"
 
 execute.config("default")
