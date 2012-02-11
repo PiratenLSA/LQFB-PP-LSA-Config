@@ -18,3 +18,5 @@ config.delegation_warning_time = '3 months'
 config.issue_discussion_url_func = function(issue)
   return "http://piratenpad.de/" .. string.upper(config.instance_prefix) .. ":LiquidFeedback_Themendiskussion_" .. issue.id
 end
+
+config.motd_intern = "===Für den Anfang===\nWir begrüßen euch in der neuen LiquidFeedback Instanz der Piratenpartei Sachsen-Anhalt.\n==Anleitung==\nIm [http://wiki.piratenpartei.de/LSA:Landesverband/Kommunikation/LiquidFeedback#Wie_funktioniert_das_System.3F Piratenwiki] und auf der [http://liquidfeedback.org/project/projekt/#1 Homepage von LiquidFeedback] findet ihr Anleitungen zu diesem System.\n==Schulungen==\nDerzeit werden Schulungen in Magdeburg angeboten. Wenn ihr teilnehmen möchtet, tragt euch im [https://magdeburg.piratenpad.de/LQFBSchulung hierfür angelegten Pad] ein bzw. beachtet die [/lsa/issue/show/3.html LQFB Initiativen in dieser Instanz]."
