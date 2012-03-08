@@ -125,16 +125,16 @@ config.footer_html = "<table style=\"width:100%;font-weight:bold;font-size: 90%;
     </tr>\
     <tr>\
       <td style=\"padding-left:1.4em;font-size: 90%;\">\
-        <a href=\"/" .. config.instance_prefix .. "/index/usage_terms.html\">Nutzungsbedingungen</a>\
+        <a href=\"" .. config.absolute_base_url .. "index/usage_terms.html\">Nutzungsbedingungen</a>\
       </td>\
       <td style=\"padding-left:1.4em;font-size: 90%;\">\
-        <a href=\"/" .. config.instance_prefix .. "/static/doc/pseudonyme.html\">Hinweise zum Umgang mit Pseudonymen</a>\
+        <a href=\"" .. config.absolute_base_url .. "static/doc/pseudonyme.html\">Hinweise zum Umgang mit Pseudonymen</a>\
       </td>\
       <td align=\"center\" style=\"font-size: 90%;\">\
         <a href=\"" .. config.mitgliedwerden .. "\">Mitglied werden</a>\
       </td>\
       <td align=\"right\" style=\"padding-right:1.4em;font-size: 90%;\">\
-        <a href=\"/" .. config.instance_prefix .. "/index/about.html\">Impressum</a>\
+        <a href=\"" .. config.absolute_base_url .. "index/about.html\">Impressum</a>\
       </td>\
     </tr>\
   </tbody>\
