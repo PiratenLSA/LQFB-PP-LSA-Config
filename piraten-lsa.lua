@@ -19,4 +19,4 @@ config.issue_discussion_url_func = function(issue)
   return "http://piratenpad.de/" .. string.upper(config.instance_prefix) .. ":LiquidFeedback_Themendiskussion_" .. issue.id
 end
 
-config.motd_intern = "===Landesparteitag 2012.1===\nAlle Anträge, die in der Diskussionsphase waren und nicht als Schnellverfahren liefen, wurden eingefroren, sodass die Anträge rechtzeitig zum Landesparteitag enden.\n\nDie restlichen Phasen wurden so verkürzt, sodass am Montag um 5:05 Uhr die Abstimmungen beginnen und am Samstag um 20:05 Uhr enden.\n\nDie Dokumentation der Datenbank-Eingriffe findet ihr hier:\n- [http://wiki.piratenpartei.de/LSA:Landesverband/Kommunikation/LiquidFeedback/Datenbankeingriffe#Manuelles_Einfrieren_der_Antr.C3.A4ge_zum_LPT_2012.1_.2807.04.2012.29 Eingriffe]"
+config.motd_intern = "Auf Anfrage wurde das Regelwerk **Superschnellverfahren** eingerichtet.\n\nEs ist ab sofort im Themenbereich **Sandkasten / Spielwiese** verfügbar. Dieses Regelwerk ist vor allem für Liquid Feedback Schulungen gedacht."
