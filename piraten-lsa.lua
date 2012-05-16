@@ -19,4 +19,4 @@ config.issue_discussion_url_func = function(issue)
   return "http://piratenpad.de/" .. string.upper(config.instance_prefix) .. ":LiquidFeedback_Themendiskussion_" .. issue.id
 end
 
-config.motd_intern = "Auf Anfrage wurde das Regelwerk **Superschnellverfahren** eingerichtet.\n\nEs ist ab sofort im Themenbereich **Sandkasten / Spielwiese** verfügbar. Dieses Regelwerk ist vor allem für Liquid Feedback Schulungen gedacht."
+-- config.motd_intern = "Auf Anfrage wurde das Regelwerk **Superschnellverfahren** eingerichtet.\n\nEs ist ab sofort im Themenbereich **Sandkasten / Spielwiese** verfügbar. Dieses Regelwerk ist vor allem für Liquid Feedback Schulungen gedacht."
