@@ -1,0 +1,31 @@
+diff -up a/app/main/_filter/21_auth.lua b/app/main/_filter/21_auth.lua
+--- a/app/main/_filter/21_auth.lua	2012-08-17 01:23:15.000000000 +0200
++++ b/app/main/_filter/21_auth.lua	2012-08-13 17:15:59.000000000 +0200
+@@ -11,6 +11,7 @@ local auth_needed = not (
+     or view   == "register"
+     or action == "register"
+     or view   == "about"
++    or view   == "usage_terms"
+     or view   == "reset_password"
+     or action == "reset_password"
+     or view   == "confirm_notify_email"
+diff -up a/app/main/index/about.lua b/app/main/index/about.lua
+--- a/app/main/index/about.lua	2012-08-17 01:23:15.000000000 +0200
++++ b/app/main/index/about.lua	2012-08-13 17:16:35.000000000 +0200
+@@ -1,6 +1,6 @@
+ ui.title(_"About site")
+ 
+-if app.session.member_id then
++--if app.session.member_id then
+   ui.actions(function()
+     ui.link{
+       module = "index",
+@@ -8,7 +8,7 @@ if app.session.member_id then
+       text = _"Terms of use"
+     }
+   end)
+-end
++--end
+ 
+ 
+ slot.put("<br />")
