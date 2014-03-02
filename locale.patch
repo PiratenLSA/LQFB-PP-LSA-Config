@@ -1,0 +1,8 @@
+--- Makefile	2012-10-20 17:21:04.000000000 +0200
++++ /opt/liquid_feedback_frontend-v2.1.1/locale/Makefile	2012-10-15 22:27:56.000000000 +0200
+@@ -1,4 +1,4 @@
+-PATH:=$(PATH):/opt/rocketwiki/
++PATH:=$(PATH):/opt/rocketwiki-lqfb/
+ 
+ DIRS = help
+ HTML_SOURCE := $(foreach DIR,$(DIRS),$(wildcard $(DIR)/*.txt))

@@ -15,8 +15,8 @@ diff -up a/app/main/index/about.lua b/app/main/index/about.lua
 @@ -1,6 +1,6 @@
  ui.title(_"About site")
  
--if app.session.member_id then
-+--if app.session.member_id then
+-if app.session.member_id and config.use_terms then
++--if app.session.member_id and config.use_terms then
    ui.actions(function()
      ui.link{
        module = "index",

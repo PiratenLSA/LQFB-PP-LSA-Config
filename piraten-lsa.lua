@@ -1,7 +1,7 @@
 config.instance_name = "Piratenpartei Sachsen-Anhalt"
 config.instance_prefix = "lsa"
 
-config.mitgliedwerden = "http://www.piraten-lsa.de/mitglied-werden"
+config.mitgliedwerden = "https://www.piraten-lsa.de/mitglied-werden"
 
 execute.config("default")
 
@@ -13,8 +13,23 @@ config.public_access = "anonymous"
 
 config.delegation_warning_time = '3 months'
 
+-- after which time a user is advised (_soft) or forced (_hard) to check
+-- unit and area delegations. default: no check at all
+-- ------------------------------------------------------------------------
+-- config.check_delegations_interval_hard = "6 months"
+-- config.check_delegations_interval_soft = "3 months"
+
+-- default option when checking delegations
+-- available options: "confirm", "revoke" and "none", default: "confirm"
+-- ------------------------------------------------------------------------
+-- config.check_delegations_default = "confirm"
+
 config.issue_discussion_url_func = function(issue)
   return "http://piratenpad.de/" .. string.upper(config.instance_prefix) .. ":LiquidFeedback_Themendiskussion_" .. issue.id
 end
 
-config.motd_public = "Diese Liquid Feedback Instanz wurde auf die neue Version 2 geupdated. Ab jetzt ist es möglich, E-Mail Benachrichtigungen zu erhalten. Diese müssen in den Einstellungen aktiviert werden.\n\nFalls Anzeigefehler auftreten ist es ratsam den Browser Cache zu leeren (STRG+F5)."
+-- config.motd_public = "Die Initiativen [https://lqfb.piraten-lsa.de/lsa/initiative/show/284.html i284] und [https://lqfb.piraten-lsa.de/lsa/initiative/show/285.html i285] wurden umgesetzt.\n\nDemnach wurden die Themenbereiche \"Außenpolitik\" sowie \"Aktionen\" deaktiviert und der neue Themenbereich \"Finanzen, Steuern und Haushalt\" eingeführt. Außerdem wurde der Themenbereich \"Bildung und Forschung\" in \"Kinder, Jugend, Familie und Bildung\" umbenannt und ein neuer mit dem Titel \"Wissenschaft und Forschung\" eingeführt.\n\nBitte kontrolliert eure Mitgliedschaften in den Themenbereichen."
+
+-- config.motd_intern = config.motd_public
+
+config.download_dir = "/opt/anondumps/"

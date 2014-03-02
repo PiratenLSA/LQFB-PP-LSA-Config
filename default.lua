@@ -6,7 +6,7 @@ config.absolute_base_url = "http://lqfb.piraten-lsa.de/" .. config.instance_pref
 
 -- config.app_logo = "logo.png"
 
-config.app_service_provider = "Piratenpartei Sachsen-Anhalt<br />Pflugstr. 9a<br />10115 Berlin<br /><br /><br \>E-Mail Administratoren: <a href='mailto:it@piraten-lsa.de'>it@piraten-lsa.de</a><br /><br />Weitere Informationen & FAQ: <a href='http://wiki.piratenpartei.de/LQPP'>http://wiki.piratenpartei.de/LQPP</a>"
+config.app_service_provider = "Piratenpartei Sachsen-Anhalt<br />Pflugstr. 9a<br />10115 Berlin<br /><br /><br \>E-Mail Administratoren: <a href='mailto:lqfb@piraten-lsa.de'>lqfb@piraten-lsa.de</a><br /><br />Weitere Informationen & FAQ: <a href='http://wiki.piratenpartei.de/LSA:LiquidFeedback'>http://wiki.piratenpartei.de/LSA:LiquidFeedback</a>"
 
 config.use_terms = "=== Nutzungsbedingungen ===\nAlles ist verboten"
 --config.use_terms_html = ""
