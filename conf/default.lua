@@ -1,6 +1,6 @@
 config.app_name = "LiquidFeedback"
 
-config.absolute_base_url = "http://lqfb.piraten-lsa.de/" .. config.instance_prefix .. "/"
+config.absolute_base_url = "https://lqfb.piraten-lsa.de/" .. config.instance_prefix .. "/"
 
 -- config.app_title = config.app_name .. " der " .. config.instance_name
 
