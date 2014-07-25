@@ -1,0 +1,3 @@
+[submodule "scripts/pylqfbannounce"]
+	path = scripts/pylqfbannounce
+	url = https://github.com/PiratenLSA/pylqfbannounce.git
