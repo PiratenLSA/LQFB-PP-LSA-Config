@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<title>LQFB Mitgliedsnummernvergleich</title>
+
+  	<meta charset="UTF-8" />
+
+    <style type="text/css">
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#vergleichen").click(function() {
+          console.log('vergleichen....');
+
+          var inlqfb = $("#inlqfb").val().split('\n');
+          var inmv_tmp = $("#inmv").val().split('\n');
+
+          var inmv = {};
+
+          inmv_tmp.forEach(function (v, k) {
+            var num = parseInt(v.trim());
+
+            if (isNaN(num))
+              return;
+
+            inmv[num] = true;
+          });
+
+          var entfernt = [];
+
+          inlqfb.forEach(function (v, k) {
+            var num = parseInt(v.trim());
+
+            if (isNaN(num))
+              return;
+
+            if (typeof inmv[num] !== 'undefined') {
+              delete inmv[num];
+            } else {
+              entfernt.push(num);
+            }
+          });
+
+          $("#entfernt").val(entfernt.join('\r\n'));
+          $("#entfernt2").val('(' + entfernt.join('|') + ')');
+
+          var inmv_arr = [];
+
+          for (var num in inmv) {
+            if (inmv.hasOwnProperty(num)) {
+              inmv_arr.push(num);
+            }
+          }
+
+          $("#neu").val(inmv_arr.join('\r\n'));
+          $("#neu2").val('(' + inmv_arr.join('|') + ')');
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div style="float: left;">
+      <h3>in LQFB</h3>
+      <textarea name="inlqfb" id="inlqfb" cols="20" rows="50"></textarea>
+    </div>
+
+    <div style="float: left; margin-left: 10px;">
+      <h3>in MV</h3>
+      <textarea name="inmv" id="inmv" cols="20" rows="50"></textarea>
+    </div>
+
+    <div style="float: left; margin-left: 10px;">
+      <h3>Neu</h3>
+      <textarea name="neu" id="neu" cols="20" rows="50" readonly></textarea>
+    </div>
+
+    <div style="float: left; margin-left: 10px;">
+      <h3>Entfernt</h3>
+      <textarea name="entfernt" id="entfernt" cols="20" rows="50" readonly></textarea>
+    </div>
+
+    <div style="float: left; margin-left: 10px;">
+      <h3>Neu (regex)</h3>
+      <textarea name="neu2" id="neu2" cols="60" rows="5" readonly></textarea>
+
+      <h3>Entfernt (regex)</h3>
+      <textarea name="entfernt2" id="entfernt2" cols="60" rows="5" readonly></textarea>
+
+      <h3>Vergleichen</h3>
+      <input type="button" value="Vergleichen" id="vergleichen" />
+    </div>
+
+    <div style="clear: both;"></div>
+
+  </body>
+</html>
